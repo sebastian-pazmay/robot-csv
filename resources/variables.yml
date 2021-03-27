@@ -1,0 +1,10 @@
+---
+file_path:
+  robot:          output/robot-reqs-list.csv
+  python:         output/python-reqs-list.csv
+
+resources:
+  robot_utils:    ${PATH_TO_ROBOT_LIBRARY}
+
+libraries:
+  python_csv:     ${PATH_TO_PYTHON_LIBRARY}

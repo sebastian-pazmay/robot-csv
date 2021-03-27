@@ -1,330 +1,393 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20210327 18:14:25.872" schemaversion="2" generator="Robot 4.0 (Python 2.7.17 on linux2)">
-<suite source="/media/sf_tech/github/robot-csv" id="s1" name="Robot-Csv">
-<suite source="/media/sf_tech/github/robot-csv/tests" id="s1-s1" name="Tests">
-<suite source="/media/sf_tech/github/robot-csv/tests/test-suite-1.robot" id="s1-s1-s1" name="Test-Suite-1">
-<test id="s1-s1-s1-t1" name="First requirement to be fullfiled">
+<robot rpa="false" generated="20210327 20:25:10.156" schemaversion="2" generator="Robot 4.0 (Python 2.7.17 on linux2)">
+<suite source="/media/sf_tech/github/robot-csv/tests" id="s1" name="Tests">
+<suite source="/media/sf_tech/github/robot-csv/tests/test-suite-1.robot" id="s1-s1" name="Test-Suite-1">
+<test id="s1-s1-t1" name="First requirement to be fullfiled">
 <kw name="Sub-requirement #1">
 <kw name="Log To Console" library="BuiltIn">
 <arg>A task should be here!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" endtime="20210327 18:14:25.904" starttime="20210327 18:14:25.904"/>
+<status status="PASS" endtime="20210327 20:25:10.218" starttime="20210327 20:25:10.217"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${rc}</var>
 <arg>0</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210327 18:14:25.904" level="INFO">${rc} = 0</msg>
-<status status="PASS" endtime="20210327 18:14:25.904" starttime="20210327 18:14:25.904"/>
+<msg timestamp="20210327 20:25:10.219" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 20:25:10.219" starttime="20210327 20:25:10.218"/>
 </kw>
 <kw name="Should Be Equal As Integers" library="BuiltIn">
 <arg>${rc}</arg>
 <arg>0</arg>
 <arg>Command failed!</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" endtime="20210327 18:14:25.905" starttime="20210327 18:14:25.905"/>
+<status status="PASS" endtime="20210327 20:25:10.219" starttime="20210327 20:25:10.219"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.905" starttime="20210327 18:14:25.904"/>
+<status status="PASS" endtime="20210327 20:25:10.219" starttime="20210327 20:25:10.217"/>
 </kw>
 <kw name="Sub-requirement #2">
 <kw name="Log To Console" library="BuiltIn">
 <arg>A task should be here!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" endtime="20210327 18:14:25.906" starttime="20210327 18:14:25.905"/>
+<status status="PASS" endtime="20210327 20:25:10.220" starttime="20210327 20:25:10.220"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${rc}</var>
 <arg>0</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210327 18:14:25.906" level="INFO">${rc} = 0</msg>
-<status status="PASS" endtime="20210327 18:14:25.907" starttime="20210327 18:14:25.906"/>
+<msg timestamp="20210327 20:25:10.220" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 20:25:10.220" starttime="20210327 20:25:10.220"/>
 </kw>
 <kw name="Should Be Equal As Integers" library="BuiltIn">
 <arg>${rc}</arg>
 <arg>0</arg>
 <arg>Command failed!</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" endtime="20210327 18:14:25.907" starttime="20210327 18:14:25.907"/>
+<status status="PASS" endtime="20210327 20:25:10.221" starttime="20210327 20:25:10.220"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.907" starttime="20210327 18:14:25.905"/>
+<status status="PASS" endtime="20210327 20:25:10.221" starttime="20210327 20:25:10.219"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>${list}</var>
 <arg>First,Requirement,Test,Suite,1</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20210327 18:14:25.907" level="INFO">${list} = [u'First,Requirement,Test,Suite,1']</msg>
-<status status="PASS" endtime="20210327 18:14:25.907" starttime="20210327 18:14:25.907"/>
+<msg timestamp="20210327 20:25:10.221" level="INFO">${list} = [u'First,Requirement,Test,Suite,1']</msg>
+<status status="PASS" endtime="20210327 20:25:10.221" starttime="20210327 20:25:10.221"/>
 </kw>
+<kw name="Append List to CSV File" library="utils">
+<arg>list=${list}</arg>
+<arg>file_path=${file_path}[robot]</arg>
+<doc>Append List to CSV File [u'First,Requirement,Test,Suite,1'] {'python': 'output/python-reqs-list.csv', 'robot': 'output/robot-reqs-list.csv'}</doc>
 <kw name="Create List" library="BuiltIn">
 <var>${data}</var>
 <arg>${list}</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20210327 18:14:25.908" level="INFO">${data} = [[u'First,Requirement,Test,Suite,1']]</msg>
-<status status="PASS" endtime="20210327 18:14:25.908" starttime="20210327 18:14:25.907"/>
+<msg timestamp="20210327 20:25:10.222" level="INFO">${data} = [[u'First,Requirement,Test,Suite,1']]</msg>
+<status status="PASS" endtime="20210327 20:25:10.222" starttime="20210327 20:25:10.222"/>
 </kw>
 <kw name="Append To Csv File" library="CSVLibrary">
 <arg>${file_path}</arg>
 <arg>${data}</arg>
 <doc>This keyword will append data to a new or existing CSV file.</doc>
-<status status="PASS" endtime="20210327 18:14:25.912" starttime="20210327 18:14:25.908"/>
+<status status="PASS" endtime="20210327 20:25:10.226" starttime="20210327 20:25:10.222"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.913" starttime="20210327 18:14:25.903"/>
+<status status="PASS" endtime="20210327 20:25:10.226" starttime="20210327 20:25:10.221"/>
+</kw>
+<kw name="Append Data to CSV File" library="libcsv">
+<arg>list=${list}</arg>
+<arg>file_path=${file_path}[python]</arg>
+<status status="PASS" endtime="20210327 20:25:10.241" starttime="20210327 20:25:10.226"/>
+</kw>
+<status status="PASS" endtime="20210327 20:25:10.243" starttime="20210327 20:25:10.216"/>
 </test>
-<test id="s1-s1-s1-t2" name="Second requirement to be fullfiled">
+<test id="s1-s1-t2" name="Second requirement to be fullfiled">
 <kw name="Sub-requirement #1">
 <kw name="Log To Console" library="BuiltIn">
 <arg>A task should be here!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" endtime="20210327 18:14:25.915" starttime="20210327 18:14:25.914"/>
+<status status="PASS" endtime="20210327 20:25:10.250" starttime="20210327 20:25:10.246"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${rc}</var>
 <arg>0</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210327 18:14:25.915" level="INFO">${rc} = 0</msg>
-<status status="PASS" endtime="20210327 18:14:25.915" starttime="20210327 18:14:25.915"/>
+<msg timestamp="20210327 20:25:10.251" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 20:25:10.251" starttime="20210327 20:25:10.251"/>
 </kw>
 <kw name="Should Be Equal As Integers" library="BuiltIn">
 <arg>${rc}</arg>
 <arg>0</arg>
 <arg>Command failed!</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" endtime="20210327 18:14:25.915" starttime="20210327 18:14:25.915"/>
+<status status="PASS" endtime="20210327 20:25:10.251" starttime="20210327 20:25:10.251"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.915" starttime="20210327 18:14:25.914"/>
+<status status="PASS" endtime="20210327 20:25:10.252" starttime="20210327 20:25:10.246"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>${list}</var>
 <arg>Second,Requirement,Test Suite,1</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20210327 18:14:25.916" level="INFO">${list} = [u'Second,Requirement,Test Suite,1']</msg>
-<status status="PASS" endtime="20210327 18:14:25.916" starttime="20210327 18:14:25.916"/>
+<msg timestamp="20210327 20:25:10.252" level="INFO">${list} = [u'Second,Requirement,Test Suite,1']</msg>
+<status status="PASS" endtime="20210327 20:25:10.252" starttime="20210327 20:25:10.252"/>
 </kw>
+<kw name="Append List to CSV File" library="utils">
+<arg>list=${list}</arg>
+<arg>file_path=${file_path}[robot]</arg>
+<doc>Append List to CSV File [u'Second,Requirement,Test Suite,1'] {'python': 'output/python-reqs-list.csv', 'robot': 'output/robot-reqs-list.csv'}</doc>
 <kw name="Create List" library="BuiltIn">
 <var>${data}</var>
 <arg>${list}</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20210327 18:14:25.916" level="INFO">${data} = [[u'Second,Requirement,Test Suite,1']]</msg>
-<status status="PASS" endtime="20210327 18:14:25.916" starttime="20210327 18:14:25.916"/>
+<msg timestamp="20210327 20:25:10.253" level="INFO">${data} = [[u'Second,Requirement,Test Suite,1']]</msg>
+<status status="PASS" endtime="20210327 20:25:10.253" starttime="20210327 20:25:10.253"/>
 </kw>
 <kw name="Append To Csv File" library="CSVLibrary">
 <arg>${file_path}</arg>
 <arg>${data}</arg>
 <doc>This keyword will append data to a new or existing CSV file.</doc>
-<status status="PASS" endtime="20210327 18:14:25.922" starttime="20210327 18:14:25.916"/>
+<status status="PASS" endtime="20210327 20:25:10.258" starttime="20210327 20:25:10.253"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.922" starttime="20210327 18:14:25.913"/>
+<status status="PASS" endtime="20210327 20:25:10.258" starttime="20210327 20:25:10.252"/>
+</kw>
+<kw name="Append Data to CSV File" library="libcsv">
+<arg>list=${list}</arg>
+<arg>file_path=${file_path}[python]</arg>
+<status status="PASS" endtime="20210327 20:25:10.261" starttime="20210327 20:25:10.259"/>
+</kw>
+<status status="PASS" endtime="20210327 20:25:10.262" starttime="20210327 20:25:10.245"/>
 </test>
-<test id="s1-s1-s1-t3" name="Third requirement to be fullfiled">
+<test id="s1-s1-t3" name="Third requirement to be fullfiled">
 <kw name="Sub-requirement #2">
 <kw name="Log To Console" library="BuiltIn">
 <arg>A task should be here!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" endtime="20210327 18:14:25.924" starttime="20210327 18:14:25.924"/>
+<status status="PASS" endtime="20210327 20:25:10.263" starttime="20210327 20:25:10.263"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${rc}</var>
 <arg>0</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210327 18:14:25.924" level="INFO">${rc} = 0</msg>
-<status status="PASS" endtime="20210327 18:14:25.924" starttime="20210327 18:14:25.924"/>
+<msg timestamp="20210327 20:25:10.264" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 20:25:10.264" starttime="20210327 20:25:10.264"/>
 </kw>
 <kw name="Should Be Equal As Integers" library="BuiltIn">
 <arg>${rc}</arg>
 <arg>0</arg>
 <arg>Command failed!</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" endtime="20210327 18:14:25.925" starttime="20210327 18:14:25.925"/>
+<status status="PASS" endtime="20210327 20:25:10.264" starttime="20210327 20:25:10.264"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.925" starttime="20210327 18:14:25.924"/>
+<status status="PASS" endtime="20210327 20:25:10.264" starttime="20210327 20:25:10.263"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>${list}</var>
 <arg>Third,Requirement,Test,Suite,1</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20210327 18:14:25.925" level="INFO">${list} = [u'Third,Requirement,Test,Suite,1']</msg>
-<status status="PASS" endtime="20210327 18:14:25.925" starttime="20210327 18:14:25.925"/>
+<msg timestamp="20210327 20:25:10.266" level="INFO">${list} = [u'Third,Requirement,Test,Suite,1']</msg>
+<status status="PASS" endtime="20210327 20:25:10.266" starttime="20210327 20:25:10.265"/>
 </kw>
+<kw name="Append List to CSV File" library="utils">
+<arg>list=${list}</arg>
+<arg>file_path=${file_path}[robot]</arg>
+<doc>Append List to CSV File [u'Third,Requirement,Test,Suite,1'] {'python': 'output/python-reqs-list.csv', 'robot': 'output/robot-reqs-list.csv'}</doc>
 <kw name="Create List" library="BuiltIn">
 <var>${data}</var>
 <arg>${list}</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20210327 18:14:25.926" level="INFO">${data} = [[u'Third,Requirement,Test,Suite,1']]</msg>
-<status status="PASS" endtime="20210327 18:14:25.926" starttime="20210327 18:14:25.925"/>
+<msg timestamp="20210327 20:25:10.267" level="INFO">${data} = [[u'Third,Requirement,Test,Suite,1']]</msg>
+<status status="PASS" endtime="20210327 20:25:10.267" starttime="20210327 20:25:10.267"/>
 </kw>
 <kw name="Append To Csv File" library="CSVLibrary">
 <arg>${file_path}</arg>
 <arg>${data}</arg>
 <doc>This keyword will append data to a new or existing CSV file.</doc>
-<status status="PASS" endtime="20210327 18:14:25.928" starttime="20210327 18:14:25.926"/>
+<status status="PASS" endtime="20210327 20:25:10.280" starttime="20210327 20:25:10.267"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.929" starttime="20210327 18:14:25.923"/>
+<status status="PASS" endtime="20210327 20:25:10.280" starttime="20210327 20:25:10.266"/>
+</kw>
+<kw name="Append Data to CSV File" library="libcsv">
+<arg>list=${list}</arg>
+<arg>file_path=${file_path}[python]</arg>
+<status status="PASS" endtime="20210327 20:25:10.287" starttime="20210327 20:25:10.281"/>
+</kw>
+<status status="PASS" endtime="20210327 20:25:10.288" starttime="20210327 20:25:10.262"/>
 </test>
-<status status="PASS" endtime="20210327 18:14:25.929" starttime="20210327 18:14:25.892"/>
+<status status="PASS" endtime="20210327 20:25:10.288" starttime="20210327 20:25:10.184"/>
 </suite>
-<suite source="/media/sf_tech/github/robot-csv/tests/test-suite-2.robot" id="s1-s1-s2" name="Test-Suite-2">
-<test id="s1-s1-s2-t1" name="First requirement to be fullfiled">
+<suite source="/media/sf_tech/github/robot-csv/tests/test-suite-2.robot" id="s1-s2" name="Test-Suite-2">
+<test id="s1-s2-t1" name="First requirement to be fullfiled">
 <kw name="Sub-requirement #1">
 <kw name="Log To Console" library="BuiltIn">
 <arg>A task should be here!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" endtime="20210327 18:14:25.940" starttime="20210327 18:14:25.940"/>
+<status status="PASS" endtime="20210327 20:25:10.299" starttime="20210327 20:25:10.298"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${rc}</var>
 <arg>0</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210327 18:14:25.941" level="INFO">${rc} = 0</msg>
-<status status="PASS" endtime="20210327 18:14:25.941" starttime="20210327 18:14:25.940"/>
+<msg timestamp="20210327 20:25:10.299" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 20:25:10.299" starttime="20210327 20:25:10.299"/>
 </kw>
 <kw name="Should Be Equal As Integers" library="BuiltIn">
 <arg>${rc}</arg>
 <arg>0</arg>
 <arg>Command failed!</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" endtime="20210327 18:14:25.941" starttime="20210327 18:14:25.941"/>
+<status status="PASS" endtime="20210327 20:25:10.300" starttime="20210327 20:25:10.299"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.941" starttime="20210327 18:14:25.940"/>
+<status status="PASS" endtime="20210327 20:25:10.300" starttime="20210327 20:25:10.298"/>
 </kw>
 <kw name="Sub-requirement #2">
 <kw name="Log To Console" library="BuiltIn">
 <arg>A task should be here!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" endtime="20210327 18:14:25.942" starttime="20210327 18:14:25.941"/>
+<status status="PASS" endtime="20210327 20:25:10.301" starttime="20210327 20:25:10.301"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${rc}</var>
 <arg>0</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210327 18:14:25.942" level="INFO">${rc} = 0</msg>
-<status status="PASS" endtime="20210327 18:14:25.942" starttime="20210327 18:14:25.942"/>
+<msg timestamp="20210327 20:25:10.301" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 20:25:10.301" starttime="20210327 20:25:10.301"/>
 </kw>
 <kw name="Should Be Equal As Integers" library="BuiltIn">
 <arg>${rc}</arg>
 <arg>0</arg>
 <arg>Command failed!</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" endtime="20210327 18:14:25.942" starttime="20210327 18:14:25.942"/>
+<status status="PASS" endtime="20210327 20:25:10.302" starttime="20210327 20:25:10.301"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.942" starttime="20210327 18:14:25.941"/>
+<status status="PASS" endtime="20210327 20:25:10.302" starttime="20210327 20:25:10.300"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>${list}</var>
 <arg>First,Requirement,Test,Suite,2</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20210327 18:14:25.943" level="INFO">${list} = [u'First,Requirement,Test,Suite,2']</msg>
-<status status="PASS" endtime="20210327 18:14:25.943" starttime="20210327 18:14:25.942"/>
+<msg timestamp="20210327 20:25:10.302" level="INFO">${list} = [u'First,Requirement,Test,Suite,2']</msg>
+<status status="PASS" endtime="20210327 20:25:10.302" starttime="20210327 20:25:10.302"/>
 </kw>
+<kw name="Append List to CSV File" library="utils">
+<arg>list=${list}</arg>
+<arg>file_path=${file_path}[robot]</arg>
+<doc>Append List to CSV File [u'First,Requirement,Test,Suite,2'] {'python': 'output/python-reqs-list.csv', 'robot': 'output/robot-reqs-list.csv'}</doc>
 <kw name="Create List" library="BuiltIn">
 <var>${data}</var>
 <arg>${list}</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20210327 18:14:25.943" level="INFO">${data} = [[u'First,Requirement,Test,Suite,2']]</msg>
-<status status="PASS" endtime="20210327 18:14:25.943" starttime="20210327 18:14:25.943"/>
+<msg timestamp="20210327 20:25:10.304" level="INFO">${data} = [[u'First,Requirement,Test,Suite,2']]</msg>
+<status status="PASS" endtime="20210327 20:25:10.304" starttime="20210327 20:25:10.303"/>
 </kw>
 <kw name="Append To Csv File" library="CSVLibrary">
 <arg>${file_path}</arg>
 <arg>${data}</arg>
 <doc>This keyword will append data to a new or existing CSV file.</doc>
-<status status="PASS" endtime="20210327 18:14:25.951" starttime="20210327 18:14:25.943"/>
+<status status="PASS" endtime="20210327 20:25:10.321" starttime="20210327 20:25:10.304"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.951" starttime="20210327 18:14:25.939"/>
+<status status="PASS" endtime="20210327 20:25:10.321" starttime="20210327 20:25:10.303"/>
+</kw>
+<kw name="Append Data to CSV File" library="libcsv">
+<arg>list=${list}</arg>
+<arg>file_path=${file_path}[python]</arg>
+<status status="PASS" endtime="20210327 20:25:10.331" starttime="20210327 20:25:10.322"/>
+</kw>
+<status status="PASS" endtime="20210327 20:25:10.331" starttime="20210327 20:25:10.297"/>
 </test>
-<test id="s1-s1-s2-t2" name="Second requirement to be fullfiled">
+<test id="s1-s2-t2" name="Second requirement to be fullfiled">
 <kw name="Sub-requirement #1">
 <kw name="Log To Console" library="BuiltIn">
 <arg>A task should be here!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" endtime="20210327 18:14:25.953" starttime="20210327 18:14:25.953"/>
+<status status="PASS" endtime="20210327 20:25:10.335" starttime="20210327 20:25:10.334"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${rc}</var>
 <arg>0</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210327 18:14:25.953" level="INFO">${rc} = 0</msg>
-<status status="PASS" endtime="20210327 18:14:25.953" starttime="20210327 18:14:25.953"/>
+<msg timestamp="20210327 20:25:10.335" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 20:25:10.335" starttime="20210327 20:25:10.335"/>
 </kw>
 <kw name="Should Be Equal As Integers" library="BuiltIn">
 <arg>${rc}</arg>
 <arg>0</arg>
 <arg>Command failed!</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" endtime="20210327 18:14:25.954" starttime="20210327 18:14:25.953"/>
+<status status="PASS" endtime="20210327 20:25:10.336" starttime="20210327 20:25:10.336"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.954" starttime="20210327 18:14:25.952"/>
+<status status="PASS" endtime="20210327 20:25:10.337" starttime="20210327 20:25:10.334"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>${list}</var>
 <arg>Second,Requirement,Test,Suite,2</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20210327 18:14:25.954" level="INFO">${list} = [u'Second,Requirement,Test,Suite,2']</msg>
-<status status="PASS" endtime="20210327 18:14:25.954" starttime="20210327 18:14:25.954"/>
+<msg timestamp="20210327 20:25:10.337" level="INFO">${list} = [u'Second,Requirement,Test,Suite,2']</msg>
+<status status="PASS" endtime="20210327 20:25:10.337" starttime="20210327 20:25:10.337"/>
 </kw>
+<kw name="Append List to CSV File" library="utils">
+<arg>list=${list}</arg>
+<arg>file_path=${file_path}[robot]</arg>
+<doc>Append List to CSV File [u'Second,Requirement,Test,Suite,2'] {'python': 'output/python-reqs-list.csv', 'robot': 'output/robot-reqs-list.csv'}</doc>
 <kw name="Create List" library="BuiltIn">
 <var>${data}</var>
 <arg>${list}</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20210327 18:14:25.954" level="INFO">${data} = [[u'Second,Requirement,Test,Suite,2']]</msg>
-<status status="PASS" endtime="20210327 18:14:25.955" starttime="20210327 18:14:25.954"/>
+<msg timestamp="20210327 20:25:10.340" level="INFO">${data} = [[u'Second,Requirement,Test,Suite,2']]</msg>
+<status status="PASS" endtime="20210327 20:25:10.340" starttime="20210327 20:25:10.339"/>
 </kw>
 <kw name="Append To Csv File" library="CSVLibrary">
 <arg>${file_path}</arg>
 <arg>${data}</arg>
 <doc>This keyword will append data to a new or existing CSV file.</doc>
-<status status="PASS" endtime="20210327 18:14:25.961" starttime="20210327 18:14:25.955"/>
+<status status="PASS" endtime="20210327 20:25:10.361" starttime="20210327 20:25:10.340"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.961" starttime="20210327 18:14:25.952"/>
+<status status="PASS" endtime="20210327 20:25:10.362" starttime="20210327 20:25:10.338"/>
+</kw>
+<kw name="Append Data to CSV File" library="libcsv">
+<arg>list=${list}</arg>
+<arg>file_path=${file_path}[python]</arg>
+<status status="PASS" endtime="20210327 20:25:10.373" starttime="20210327 20:25:10.363"/>
+</kw>
+<status status="PASS" endtime="20210327 20:25:10.373" starttime="20210327 20:25:10.332"/>
 </test>
-<test id="s1-s1-s2-t3" name="Third requirement to be fullfiled">
+<test id="s1-s2-t3" name="Third requirement to be fullfiled">
 <kw name="Sub-requirement #2">
 <kw name="Log To Console" library="BuiltIn">
 <arg>A task should be here!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" endtime="20210327 18:14:25.963" starttime="20210327 18:14:25.962"/>
+<status status="PASS" endtime="20210327 20:25:10.375" starttime="20210327 20:25:10.375"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${rc}</var>
 <arg>0</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20210327 18:14:25.963" level="INFO">${rc} = 0</msg>
-<status status="PASS" endtime="20210327 18:14:25.963" starttime="20210327 18:14:25.963"/>
+<msg timestamp="20210327 20:25:10.376" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 20:25:10.376" starttime="20210327 20:25:10.375"/>
 </kw>
 <kw name="Should Be Equal As Integers" library="BuiltIn">
 <arg>${rc}</arg>
 <arg>0</arg>
 <arg>Command failed!</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" endtime="20210327 18:14:25.964" starttime="20210327 18:14:25.963"/>
+<status status="PASS" endtime="20210327 20:25:10.376" starttime="20210327 20:25:10.376"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.964" starttime="20210327 18:14:25.962"/>
+<status status="PASS" endtime="20210327 20:25:10.376" starttime="20210327 20:25:10.374"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>${list}</var>
 <arg>Third,Requirement,Test,Suite,2</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20210327 18:14:25.964" level="INFO">${list} = [u'Third,Requirement,Test,Suite,2']</msg>
-<status status="PASS" endtime="20210327 18:14:25.964" starttime="20210327 18:14:25.964"/>
+<msg timestamp="20210327 20:25:10.377" level="INFO">${list} = [u'Third,Requirement,Test,Suite,2']</msg>
+<status status="PASS" endtime="20210327 20:25:10.377" starttime="20210327 20:25:10.376"/>
 </kw>
+<kw name="Append List to CSV File" library="utils">
+<arg>list=${list}</arg>
+<arg>file_path=${file_path}[robot]</arg>
+<doc>Append List to CSV File [u'Third,Requirement,Test,Suite,2'] {'python': 'output/python-reqs-list.csv', 'robot': 'output/robot-reqs-list.csv'}</doc>
 <kw name="Create List" library="BuiltIn">
 <var>${data}</var>
 <arg>${list}</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20210327 18:14:25.965" level="INFO">${data} = [[u'Third,Requirement,Test,Suite,2']]</msg>
-<status status="PASS" endtime="20210327 18:14:25.965" starttime="20210327 18:14:25.964"/>
+<msg timestamp="20210327 20:25:10.378" level="INFO">${data} = [[u'Third,Requirement,Test,Suite,2']]</msg>
+<status status="PASS" endtime="20210327 20:25:10.378" starttime="20210327 20:25:10.378"/>
 </kw>
 <kw name="Append To Csv File" library="CSVLibrary">
 <arg>${file_path}</arg>
 <arg>${data}</arg>
 <doc>This keyword will append data to a new or existing CSV file.</doc>
-<status status="PASS" endtime="20210327 18:14:25.976" starttime="20210327 18:14:25.965"/>
+<status status="PASS" endtime="20210327 20:25:10.381" starttime="20210327 20:25:10.378"/>
 </kw>
-<status status="PASS" endtime="20210327 18:14:25.977" starttime="20210327 18:14:25.961"/>
+<status status="PASS" endtime="20210327 20:25:10.381" starttime="20210327 20:25:10.377"/>
+</kw>
+<kw name="Append Data to CSV File" library="libcsv">
+<arg>list=${list}</arg>
+<arg>file_path=${file_path}[python]</arg>
+<status status="PASS" endtime="20210327 20:25:10.401" starttime="20210327 20:25:10.382"/>
+</kw>
+<status status="PASS" endtime="20210327 20:25:10.401" starttime="20210327 20:25:10.374"/>
 </test>
-<status status="PASS" endtime="20210327 18:14:25.977" starttime="20210327 18:14:25.930"/>
+<status status="PASS" endtime="20210327 20:25:10.402" starttime="20210327 20:25:10.289"/>
 </suite>
-<status status="PASS" endtime="20210327 18:14:25.978" starttime="20210327 18:14:25.890"/>
-</suite>
-<status status="PASS" endtime="20210327 18:14:25.985" starttime="20210327 18:14:25.874"/>
+<status status="PASS" endtime="20210327 20:25:10.402" starttime="20210327 20:25:10.159"/>
 </suite>
 <statistics>
 <total>
@@ -333,10 +396,9 @@
 <tag>
 </tag>
 <suite>
-<stat fail="0" skip="0" id="s1" name="Robot-Csv" pass="6">Robot-Csv</stat>
-<stat fail="0" skip="0" id="s1-s1" name="Tests" pass="6">Robot-Csv.Tests</stat>
-<stat fail="0" skip="0" id="s1-s1-s1" name="Test-Suite-1" pass="3">Robot-Csv.Tests.Test-Suite-1</stat>
-<stat fail="0" skip="0" id="s1-s1-s2" name="Test-Suite-2" pass="3">Robot-Csv.Tests.Test-Suite-2</stat>
+<stat fail="0" skip="0" id="s1" name="Tests" pass="6">Tests</stat>
+<stat fail="0" skip="0" id="s1-s1" name="Test-Suite-1" pass="3">Tests.Test-Suite-1</stat>
+<stat fail="0" skip="0" id="s1-s2" name="Test-Suite-2" pass="3">Tests.Test-Suite-2</stat>
 </suite>
 </statistics>
 <errors>
