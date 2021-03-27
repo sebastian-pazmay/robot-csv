@@ -20,14 +20,14 @@ Sample result files for approach using robot can be found [HERE](output/robot-re
 
 Variables to be replaced before running:
 
-In variables.yml:
+In [variables.yml](resources/variables.yml):
 
 ```text
 - ${PATH_TO_ROBOT_LIBRARY}
 - ${PATH_TO_PYTHON_LIBRARY}
 ```
 
-In test suite robot files:
+In [test-suite-1.robot](tests/test-suite-1.robot) and [test-suite-2.robot](tests/test-suite-2.robot):
 
 ```text
 - ${PATH_TO_VARIABLES_FILE}
