@@ -3,7 +3,7 @@ Library  OperatingSystem
 Library  CSVLibrary
 
 *** Variables ***
-${file_path}               output/reqs-list.csv
+${file_path}               output/robot-reqs-list.csv
 
 ***Test Cases***
 First requirement to be fullfiled

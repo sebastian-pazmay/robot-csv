@@ -3,24 +3,27 @@ Library  OperatingSystem
 Library  CSVLibrary
 
 *** Variables ***
-${file_path}               output/requirements-list.csv
+${file_path}               output/robot-reqs-list.csv
 
 ***Test Cases***
 First requirement to be fullfiled
     Sub-requirement #1
     Sub-requirement #2
-    ${req}    Set Variable    First,Requirement,Test,Suite,2
-    Append To Csv File    ${file_path}    ${req}
+    ${list}=    Create List    First,Requirement,Test,Suite,2
+    ${data}=    Create List    ${list}
+    Append To Csv File    ${file_path}    ${data}
 
 Second requirement to be fullfiled
     Sub-requirement #1
-    ${req}    Set Variable    Second,Requirement,Test Suite,2
-    Append To Csv File    ${file_path}    ${req}
+    ${list}=    Create List    Second,Requirement,Test,Suite,2
+    ${data}=    Create List    ${list}
+    Append To Csv File    ${file_path}    ${data}
 
 Third requirement to be fullfiled
     Sub-requirement #2
-    ${req}    Set Variable    Third,Requirement,Test,Suite,2
-    Append To Csv File    ${file_path}    ${req}
+    ${list}=    Create List    Third,Requirement,Test,Suite,2
+    ${data}=    Create List    ${list}
+    Append To Csv File    ${file_path}    ${data}
 
 ***Keywords***
 Sub-requirement #1
