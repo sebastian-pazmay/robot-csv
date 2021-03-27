@@ -1,16 +1,26 @@
 ***Settings***
 Library  OperatingSystem
+Library  CSVLibrary
+
+*** Variables ***
+${file_path}               output/requirements-list.csv
 
 ***Test Cases***
 First requirement to be fullfiled
     Sub-requirement #1
     Sub-requirement #2
+    ${req}    Set Variable    First,Requirement,Test,Suite,2
+    Append To Csv File    ${file_path}    ${req}
 
 Second requirement to be fullfiled
     Sub-requirement #1
+    ${req}    Set Variable    Second,Requirement,Test Suite,2
+    Append To Csv File    ${file_path}    ${req}
 
 Third requirement to be fullfiled
     Sub-requirement #2
+    ${req}    Set Variable    Third,Requirement,Test,Suite,2
+    Append To Csv File    ${file_path}    ${req}
 
 ***Keywords***
 Sub-requirement #1

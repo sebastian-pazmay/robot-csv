@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210327 18:10:33.184" schemaversion="2" generator="Robot 4.0 (Python 2.7.17 on linux2)">
+<suite source="/media/sf_tech/github/robot-csv" id="s1" name="Robot-Csv">
+<suite source="/media/sf_tech/github/robot-csv/tests" id="s1-s1" name="Tests">
+<suite source="/media/sf_tech/github/robot-csv/tests/test-suite-1.robot" id="s1-s1-s1" name="Test-Suite-1">
+<test id="s1-s1-s1-t1" name="First requirement to be fullfiled">
+<kw name="Sub-requirement #1">
+<kw name="Log To Console" library="BuiltIn">
+<arg>A task should be here!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20210327 18:10:33.218" starttime="20210327 18:10:33.218"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rc}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210327 18:10:33.219" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 18:10:33.219" starttime="20210327 18:10:33.218"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${rc}</arg>
+<arg>0</arg>
+<arg>Command failed!</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" endtime="20210327 18:10:33.219" starttime="20210327 18:10:33.219"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.219" starttime="20210327 18:10:33.218"/>
+</kw>
+<kw name="Sub-requirement #2">
+<kw name="Log To Console" library="BuiltIn">
+<arg>A task should be here!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20210327 18:10:33.220" starttime="20210327 18:10:33.220"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rc}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210327 18:10:33.220" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 18:10:33.220" starttime="20210327 18:10:33.220"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${rc}</arg>
+<arg>0</arg>
+<arg>Command failed!</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" endtime="20210327 18:10:33.220" starttime="20210327 18:10:33.220"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.220" starttime="20210327 18:10:33.219"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${list}</var>
+<arg>First,Requirement,Test,Suite,1</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20210327 18:10:33.221" level="INFO">${list} = [u'First,Requirement,Test,Suite,1']</msg>
+<status status="PASS" endtime="20210327 18:10:33.221" starttime="20210327 18:10:33.221"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${data}</var>
+<arg>${list}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20210327 18:10:33.221" level="INFO">${data} = [[u'First,Requirement,Test,Suite,1']]</msg>
+<status status="PASS" endtime="20210327 18:10:33.221" starttime="20210327 18:10:33.221"/>
+</kw>
+<kw name="Append To Csv File" library="CSVLibrary">
+<arg>${file_path}</arg>
+<arg>${data}</arg>
+<doc>This keyword will append data to a new or existing CSV file.</doc>
+<status status="PASS" endtime="20210327 18:10:33.232" starttime="20210327 18:10:33.221"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.232" starttime="20210327 18:10:33.217"/>
+</test>
+<test id="s1-s1-s1-t2" name="Second requirement to be fullfiled">
+<kw name="Sub-requirement #1">
+<kw name="Log To Console" library="BuiltIn">
+<arg>A task should be here!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20210327 18:10:33.233" starttime="20210327 18:10:33.233"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rc}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210327 18:10:33.234" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 18:10:33.234" starttime="20210327 18:10:33.233"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${rc}</arg>
+<arg>0</arg>
+<arg>Command failed!</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" endtime="20210327 18:10:33.234" starttime="20210327 18:10:33.234"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.234" starttime="20210327 18:10:33.233"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${list}</var>
+<arg>Second,Requirement,Test Suite,1</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20210327 18:10:33.234" level="INFO">${list} = [u'Second,Requirement,Test Suite,1']</msg>
+<status status="PASS" endtime="20210327 18:10:33.234" starttime="20210327 18:10:33.234"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${data}</var>
+<arg>${list}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20210327 18:10:33.235" level="INFO">${data} = [[u'Second,Requirement,Test Suite,1']]</msg>
+<status status="PASS" endtime="20210327 18:10:33.235" starttime="20210327 18:10:33.234"/>
+</kw>
+<kw name="Append To Csv File" library="CSVLibrary">
+<arg>${file_path}</arg>
+<arg>${data}</arg>
+<doc>This keyword will append data to a new or existing CSV file.</doc>
+<status status="PASS" endtime="20210327 18:10:33.241" starttime="20210327 18:10:33.235"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.242" starttime="20210327 18:10:33.232"/>
+</test>
+<test id="s1-s1-s1-t3" name="Third requirement to be fullfiled">
+<kw name="Sub-requirement #2">
+<kw name="Log To Console" library="BuiltIn">
+<arg>A task should be here!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20210327 18:10:33.243" starttime="20210327 18:10:33.243"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rc}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210327 18:10:33.243" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 18:10:33.244" starttime="20210327 18:10:33.243"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${rc}</arg>
+<arg>0</arg>
+<arg>Command failed!</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" endtime="20210327 18:10:33.251" starttime="20210327 18:10:33.244"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.251" starttime="20210327 18:10:33.242"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${list}</var>
+<arg>Third,Requirement,Test,Suite,1</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20210327 18:10:33.251" level="INFO">${list} = [u'Third,Requirement,Test,Suite,1']</msg>
+<status status="PASS" endtime="20210327 18:10:33.251" starttime="20210327 18:10:33.251"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${data}</var>
+<arg>${list}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20210327 18:10:33.252" level="INFO">${data} = [[u'Third,Requirement,Test,Suite,1']]</msg>
+<status status="PASS" endtime="20210327 18:10:33.252" starttime="20210327 18:10:33.251"/>
+</kw>
+<kw name="Append To Csv File" library="CSVLibrary">
+<arg>${file_path}</arg>
+<arg>${data}</arg>
+<doc>This keyword will append data to a new or existing CSV file.</doc>
+<status status="PASS" endtime="20210327 18:10:33.258" starttime="20210327 18:10:33.252"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.259" starttime="20210327 18:10:33.242"/>
+</test>
+<status status="PASS" endtime="20210327 18:10:33.260" starttime="20210327 18:10:33.204"/>
+</suite>
+<suite source="/media/sf_tech/github/robot-csv/tests/test-suite-2.robot" id="s1-s1-s2" name="Test-Suite-2">
+<test id="s1-s1-s2-t1" name="First requirement to be fullfiled">
+<kw name="Sub-requirement #1">
+<kw name="Log To Console" library="BuiltIn">
+<arg>A task should be here!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20210327 18:10:33.268" starttime="20210327 18:10:33.267"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rc}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210327 18:10:33.268" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 18:10:33.268" starttime="20210327 18:10:33.268"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${rc}</arg>
+<arg>0</arg>
+<arg>Command failed!</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" endtime="20210327 18:10:33.269" starttime="20210327 18:10:33.268"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.269" starttime="20210327 18:10:33.267"/>
+</kw>
+<kw name="Sub-requirement #2">
+<kw name="Log To Console" library="BuiltIn">
+<arg>A task should be here!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20210327 18:10:33.270" starttime="20210327 18:10:33.269"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rc}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210327 18:10:33.270" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 18:10:33.270" starttime="20210327 18:10:33.270"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${rc}</arg>
+<arg>0</arg>
+<arg>Command failed!</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" endtime="20210327 18:10:33.270" starttime="20210327 18:10:33.270"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.270" starttime="20210327 18:10:33.269"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${req}</var>
+<arg>First,Requirement,Test,Suite,2</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210327 18:10:33.271" level="INFO">${req} = First,Requirement,Test,Suite,2</msg>
+<status status="PASS" endtime="20210327 18:10:33.271" starttime="20210327 18:10:33.271"/>
+</kw>
+<kw name="Append To Csv File" library="CSVLibrary">
+<arg>${file_path}</arg>
+<arg>${req}</arg>
+<doc>This keyword will append data to a new or existing CSV file.</doc>
+<status status="PASS" endtime="20210327 18:10:33.280" starttime="20210327 18:10:33.271"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.281" starttime="20210327 18:10:33.267"/>
+</test>
+<test id="s1-s1-s2-t2" name="Second requirement to be fullfiled">
+<kw name="Sub-requirement #1">
+<kw name="Log To Console" library="BuiltIn">
+<arg>A task should be here!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20210327 18:10:33.282" starttime="20210327 18:10:33.282"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rc}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210327 18:10:33.283" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 18:10:33.283" starttime="20210327 18:10:33.282"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${rc}</arg>
+<arg>0</arg>
+<arg>Command failed!</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" endtime="20210327 18:10:33.283" starttime="20210327 18:10:33.283"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.283" starttime="20210327 18:10:33.282"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${req}</var>
+<arg>Second,Requirement,Test Suite,2</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210327 18:10:33.283" level="INFO">${req} = Second,Requirement,Test Suite,2</msg>
+<status status="PASS" endtime="20210327 18:10:33.283" starttime="20210327 18:10:33.283"/>
+</kw>
+<kw name="Append To Csv File" library="CSVLibrary">
+<arg>${file_path}</arg>
+<arg>${req}</arg>
+<doc>This keyword will append data to a new or existing CSV file.</doc>
+<status status="PASS" endtime="20210327 18:10:33.293" starttime="20210327 18:10:33.284"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.293" starttime="20210327 18:10:33.281"/>
+</test>
+<test id="s1-s1-s2-t3" name="Third requirement to be fullfiled">
+<kw name="Sub-requirement #2">
+<kw name="Log To Console" library="BuiltIn">
+<arg>A task should be here!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20210327 18:10:33.295" starttime="20210327 18:10:33.294"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rc}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210327 18:10:33.295" level="INFO">${rc} = 0</msg>
+<status status="PASS" endtime="20210327 18:10:33.295" starttime="20210327 18:10:33.295"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${rc}</arg>
+<arg>0</arg>
+<arg>Command failed!</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" endtime="20210327 18:10:33.295" starttime="20210327 18:10:33.295"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.295" starttime="20210327 18:10:33.294"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${req}</var>
+<arg>Third,Requirement,Test,Suite,2</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210327 18:10:33.296" level="INFO">${req} = Third,Requirement,Test,Suite,2</msg>
+<status status="PASS" endtime="20210327 18:10:33.296" starttime="20210327 18:10:33.295"/>
+</kw>
+<kw name="Append To Csv File" library="CSVLibrary">
+<arg>${file_path}</arg>
+<arg>${req}</arg>
+<doc>This keyword will append data to a new or existing CSV file.</doc>
+<status status="PASS" endtime="20210327 18:10:33.302" starttime="20210327 18:10:33.296"/>
+</kw>
+<status status="PASS" endtime="20210327 18:10:33.303" starttime="20210327 18:10:33.293"/>
+</test>
+<status status="PASS" endtime="20210327 18:10:33.303" starttime="20210327 18:10:33.261"/>
+</suite>
+<status status="PASS" endtime="20210327 18:10:33.304" starttime="20210327 18:10:33.202"/>
+</suite>
+<status status="PASS" endtime="20210327 18:10:33.305" starttime="20210327 18:10:33.186"/>
+</suite>
+<statistics>
+<total>
+<stat fail="0" skip="0" pass="6">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" skip="0" id="s1" name="Robot-Csv" pass="6">Robot-Csv</stat>
+<stat fail="0" skip="0" id="s1-s1" name="Tests" pass="6">Robot-Csv.Tests</stat>
+<stat fail="0" skip="0" id="s1-s1-s1" name="Test-Suite-1" pass="3">Robot-Csv.Tests.Test-Suite-1</stat>
+<stat fail="0" skip="0" id="s1-s1-s2" name="Test-Suite-2" pass="3">Robot-Csv.Tests.Test-Suite-2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
